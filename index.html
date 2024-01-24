@@ -38,6 +38,7 @@ targ.src="targettransparent.png"
 var proc
 let ball={ x: .1*c1.width, y: .65*c1.height}
 ct1.fillStyle="black"
+display()
 
 function play(){
   proc=setInterval(shoot,delay)
@@ -46,7 +47,8 @@ function stop(){
   cancelInterval(proc)
 }
 function shoot(){
-  ball.y-=.01*c1.height
+  ball.y-=.001*c1.height
+  ball.x+=.001*c1.width
   display()
 }
 function display(){
