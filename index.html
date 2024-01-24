@@ -17,17 +17,15 @@
  <br>
  <canvas id="Canvas1" style="border: 1px solid"></canvas>
 
-   
 
 <script>
 const c1 = document.getElementById("Canvas1")
 const ct1 = c1.getContext("2d")
-const speedDelay=document.getElementById('speed')
+const delay=document.getElementById('speed')
 const targ= new Image()
 
 c1.width=Math.floor(.97*window.innerWidth)
 c1.height=Math.floor(.7*window.innerHeight)
-
 
 ct1.fillStyle="lightblue"
 ct1.fillRect(0,0,c1.width,.7*c1.height)
@@ -37,7 +35,22 @@ targ.onload=function(){
   ct1.drawImage(targ, .8*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
 }
 targ.src="targettransparent.png"
+var proc
+let ball={ x: .1*c1.width, y: .65*c1.height}
 
+function play(){
+  proc=setInterval(shoot,delay)
+}
+function stop(){
+  cancelInterval(proc)
+}
+function shoot(){
+  ball.y-=.01*c1.height
+  display()
+}
+function display(){
+  ct1.fillRect(ball.x,bally.y,4,4)
+}
 
  
 </script>
