@@ -1,6 +1,6 @@
 <html>
 <body>
-  
+  <p>simulation</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -52,7 +52,7 @@ function stop(){
   cancelInterval(proc)
 }
 function shoot(){
-  ball.vy=+.001*c1.height
+  ball.vy=+.0001*c1.height
   ball.y+=ball.vy
   ball.x+=ball.vx
   display()
