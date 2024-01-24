@@ -24,14 +24,20 @@
 const c1 = document.getElementById("Canvas1")
 const ct1 = c1.getContext("2d")
 const speedDelay=document.getElementById('speed')
+const targ= new Image()
+
 c1.width=Math.floor(.97*window.innerWidth)
-c1.height=Math.floor(.4*window.innerHeight)
+c1.height=Math.floor(.7*window.innerHeight)
+
 
 ct1.fillStyle="blue"
 ct1.fillRect(0,0,c1.width,.7*c1.height)
 ct1.fillStyle="green"
 ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
-
+targ.onload=function(){
+  ct1.drawImage(targ, .8*c1.width,.5*c1.height,.2*c1.width,.2*c1.height)
+}
+targ.src="targettransparent.png)
 
 
 
