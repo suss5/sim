@@ -17,7 +17,7 @@
 <script>
 const c1 = document.getElementById("Canvas1")
 const ct1 = c1.getContext("2d")
-const delay=50
+const delay=30
 const targ= new Image()
 c1.width=Math.floor(.97*window.innerWidth)
 c1.height=Math.floor(.7*window.innerHeight)
@@ -35,7 +35,7 @@ function gen(){
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
  ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
- ct1.drawImage(targ, .8*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
+ ct1.drawImage(targ, .7*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
  ct1.fillStyle="black"
  gen()
  display()
