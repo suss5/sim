@@ -36,10 +36,14 @@ targ.onload=function(){
 }
 targ.src="targettransparent.png"
 var proc
-let ball={ x: .1*c1.width, y: .65*c1.height}
+var ball
 ct1.fillStyle="black"
+gen()
 display()
 
+function gen(){
+    ball={ x: .1*c1.width, y: .65*c1.height, vx=.001*c1.width, vy=0}
+}
 function play(){
   proc=setInterval(shoot,delay)
 }
@@ -47,8 +51,9 @@ function stop(){
   cancelInterval(proc)
 }
 function shoot(){
-  ball.y-=.001*c1.height
-  ball.x+=.001*c1.width
+  ball.vy-=.001*c1.height
+  ball.y+=ball.vy
+  ball.x+=ball.vx
   display()
 }
 function display(){
