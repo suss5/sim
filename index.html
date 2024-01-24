@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>simulation</p>
+  <p>simulation1</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -42,7 +42,7 @@ gen()
 display()
 
 function gen(){
-    ball={ x: .1*c1.width, y: .65*c1.height, vx: .001*c1.width, vy: -5}
+    ball={ x: .1*c1.width, y: .65*c1.height, vx: .001*c1.width, vy: -10}
 }
 function play(){
   proc=setInterval(shoot,delay)
@@ -52,7 +52,7 @@ function stop(){
   cancelInterval(proc)
 }
 function shoot(){
-  ball.vy=+.0001*c1.height
+  ball.vy=+.001*c1.height
   ball.y+=ball.vy
   ball.x+=ball.vx
   display()
