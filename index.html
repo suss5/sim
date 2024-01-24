@@ -53,6 +53,7 @@ function shoot(){
   ball.y+=ball.vy
   ball.x+=ball.vx
   display()
+  if(ball.y>.8*c1.height){ stop() }
 }
 function display(){
   ct1.fillRect(ball.x,ball.y,3,3)
