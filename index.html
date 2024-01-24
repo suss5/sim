@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>simulation1</p>
+  <p>simulationJS</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -28,18 +28,20 @@ ct1.fillStyle="lightblue"
 ct1.fillRect(0,0,c1.width,.7*c1.height)
 ct1.fillStyle="lightgreen"
 ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
-targ.onload=function(){
-  ct1.drawImage(targ, .8*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
-}
+targ.onload=function(){ gen() }
 targ.src="targettransparent.png"
-var proc
-var ball
-ct1.fillStyle="black"
-gen()
-display()
+var proc,ball
 
 function gen(){
-    ball={ x: .1*c1.width, y: .65*c1.height, vx: .002*c1.width, vy: -6}
+ ball={ x: .1*c1.width, y: .65*c1.height, vx: .002*c1.width, vy: -6}
+ ct1.fillStyle="lightblue"
+ ct1.fillRect(0,0,c1.width,.7*c1.height)
+ ct1.fillStyle="lightgreen"
+ ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
+ ct1.drawImage(targ, .8*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
+ ct1.fillStyle="black"
+ gen()
+ display()
 }
 function play(){
   proc=setInterval(shoot,delay)
