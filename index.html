@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>Simulation2</p>
+  <p>Simulation</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -42,7 +42,7 @@ function gen(){
  angx=Math.cos(angle)
  angy=Math.sin(angle)
  sp=.002*c1.height*(+(initSpeed.value))
- ball={x: .1*c1.width, y: .65*c1.height, vx: .01*angx*c1.width, vy: -sp*angy, ay: .05*sp}
+ ball={x: .1*c1.width, y: .65*c1.height, vx: sp*angx, vy: -sp*angy, ay: .05*sp}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
