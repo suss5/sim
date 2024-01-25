@@ -14,14 +14,10 @@ const ct1 = c1.getContext("2d")
 const direction = document.getElementById("ang")
 const initSpeed = document.getElementById("speed")
 const delay=20
-const targ= new Image()
+var proc,ball
 c1.width=Math.min(Math.floor(.9*window.innerWidth), Math.floor(.8*window.innerHeight) )
 c1.height=c1.width
-ct1.fillStyle="lightblue"
-ct1.fillRect(0,0,c1.width,.7*c1.height)
-ct1.fillStyle="lightgreen"
-ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
-var proc,ball
+
 
 gen()
 
