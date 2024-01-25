@@ -23,7 +23,7 @@
 const c1 = document.getElementById("Canvas1")
 const ct1 = c1.getContext("2d")
 const direction = document.getElementById("ang")
-const initspeed = document.getElementById("speed")
+const initSpeed = document.getElementById("speed")
 const delay=30
 const targ= new Image()
 c1.width=Math.min(Math.floor(.97*window.innerWidth), Math.floor(.7*window.innerHeight) )
@@ -41,8 +41,8 @@ function gen(){
  angle=angle*3.142/180
  angx=Math.cos(angle)
  angy=Math.sin(angle)
- sp=.15*(+(initspeed.value))
- ball={x: .1*c1.width, y: .65*c1.height, vx: .01*angx*c1.width, vy: -sp*angy*c1.height, ay: .05*sp*angy*c1.height}
+ sp=.2*c1.height*(+(initSpeed.value))
+ ball={x: .1*c1.width, y: .65*c1.height, vx: .01*angx*c1.width, vy: -sp*angy, ay: .05*sp}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
