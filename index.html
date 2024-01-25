@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>Simulation</p>
+  <p>Simulation1</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -46,6 +46,10 @@ function gen(){
  ct1.drawImage(targ, .7*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
  ct1.fillStyle="black"
  display()
+ ct1.beginPath()
+ ct1.moveTo(ball.x,ball.y)
+ ct1.lineTo(ball.x+1000*speed*angx,ball.y-1000*speed*angy)
+ ct1.stroke()
 }
   
 function play(){
