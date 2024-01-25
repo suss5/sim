@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>Simulation1</p>
+  <p>Simulation</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -11,7 +11,7 @@
   <button id="generate" onclick="gen()">
      <img src="gen100.png" style="width: 6vw; height: 6vh;">
   </button>
-  <label for="ang" style="font-size: 7vw" >Enter an Angle</label>
+  <label for="ang" style="font-size: 4vw" >Enter an Angle</label>
   <input type="number" id="ang" name="ang" min="0" max="90" value="30" output="gen()">
 
  <br>
@@ -37,7 +37,7 @@ function gen(){
  angle=+(direction.value)/6.29
  angx=Math.cos(angle)
  angy=Math.sin(angle)
- ball={ x: .1*c1.width, y: .65*c1.height, vx: .01*angx*c1.width, vy: -.01*angy*c1.height, ay: .001*angy*c1.height}
+ ball={ x: .1*c1.width, y: .65*c1.height, vx: .01*angx*c1.width, vy: .01*angy*c1.height, ay: -.001*angy*c1.height}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
