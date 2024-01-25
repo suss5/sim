@@ -9,7 +9,7 @@
   <label for="ang" style="font-size: 4vw" >Angle</label>
   <input type="number" id="ang" name="ang" style="font-size: 4vw" min="0" max="90" value="30">
   <label for="speed" style="font-size: 4vw" >Speed</label>
-  <input type="number" id="speed" name="speed" style="font-size: 4vw" min="1" max="40" value="10">
+  <input type="number" id="speed" name="speed" style="font-size: 4vw" min="1" max="20" value="10">
 
  <br>
  <canvas id="Canvas1" style="border: 1px solid"></canvas>
@@ -37,7 +37,7 @@ function gen(){
  angx=Math.cos(angle)
  angy=Math.sin(angle)
  sp=.001*c1.height*(+(initSpeed.value))
- ball={x: .1*c1.width, y: .65*c1.height, vx: sp*angx, vy: -sp*angy, ay: .05*sp}
+ ball={x: .1*c1.width, y: .65*c1.height, vx: sp*angx, vy: -sp*angy, ay: .03*sp}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
