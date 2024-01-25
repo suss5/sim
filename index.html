@@ -34,7 +34,8 @@ targ.src="targettransparent.png"
 var proc,ball
 
 function gen(){
- angle=+(direction.value)/6.29
+ angle=+(direction.value)
+ angle=angle/6.29
  angx=Math.cos(angle)
  angy=Math.sin(angle)
  speed=.01
@@ -48,7 +49,7 @@ function gen(){
  display()
  ct1.beginPath()
  ct1.moveTo(ball.x,ball.y)
- ct1.lineTo(ball.x+1000*speed*angx,ball.y-1000*speed*angy)
+ ct1.lineTo(ball.x+.01*c1.width*angx,ball.y-.01*c1.height*angy)
  ct1.stroke()
 }
   
