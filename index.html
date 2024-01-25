@@ -11,7 +11,7 @@
   <button id="generate" onclick="gen()">
      <img src="gen100.png" style="width: 6vw; height: 6vh;">
   </button>
-  <label for="ang">Enter an Angle</label>
+  <label for="ang" style="font-size 6vw" >Enter an Angle</label>
   <input type="number" id="ang" name="ang" min="0" max="90">
 
  <br>
@@ -34,8 +34,10 @@ targ.src="targettransparent.png"
 var proc,ball
 
 function gen(){
- angle=+(direction.value)
- ball={ x: .1*c1.width, y: .65*c1.height, vx: .003*c1.width, vy: -.006*c1.height}
+ angle=+(direction.value)/6.29
+ angx=Math.sin(angle)
+ angy=Math.cos(angle)
+ ball={ x: .1*c1.width, y: .65*c1.height, vx: .006*angx*c1.width, vy: -.006*angy*c1.height}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
