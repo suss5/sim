@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>Simulation</p>
+  <p>Simulation1</p>
   <button id="play" onclick="play()">
      <img src="play100.png" style="width: 8vw; height: 8vh;">
   </button>
@@ -24,7 +24,7 @@ const c1 = document.getElementById("Canvas1")
 const ct1 = c1.getContext("2d")
 const direction = document.getElementById("ang")
 const initSpeed = document.getElementById("speed")
-const delay=30
+const delay=20
 const targ= new Image()
 c1.width=Math.min(Math.floor(.97*window.innerWidth), Math.floor(.8*window.innerHeight) )
 c1.height=c1.width
@@ -41,7 +41,7 @@ function gen(){
  angle=angle*3.142/180
  angx=Math.cos(angle)
  angy=Math.sin(angle)
- sp=.002*c1.height*(+(initSpeed.value))
+ sp=.001*c1.height*(+(initSpeed.value))
  ball={x: .1*c1.width, y: .65*c1.height, vx: sp*angx, vy: -sp*angy, ay: .05*sp}
  ct1.fillStyle="lightblue"
  ct1.fillRect(0,0,c1.width,.7*c1.height)
@@ -54,7 +54,7 @@ function gen(){
  ct1.lineWidth=4
  ct1.beginPath()
  ct1.moveTo(ball.x,ball.y)
- ct1.lineTo(ball.x+ sp*angx, ball.y- sp*angy)
+ ct1.lineTo(ball.x+ 2*sp*angx, ball.y- 2*sp*angy)
  ct1.stroke()
 }
   
