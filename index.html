@@ -24,9 +24,9 @@ ct1.fillStyle="lightblue"
 ct1.fillRect(0,0,c1.width,.7*c1.height)
 ct1.fillStyle="lightgreen"
 ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
-targ.onload=function(){ gen() }
-targ.src="targettransparent.png"
 var proc,ball
+
+gen()
 
 function gen(){
  angle=+(direction.value)
@@ -39,11 +39,13 @@ function gen(){
  ct1.fillRect(0,0,c1.width,.7*c1.height)
  ct1.fillStyle="lightgreen"
  ct1.fillRect(0,.7*c1.height,c1.width,.3*c1.height)
- ct1.drawImage(targ, .7*c1.width, .5*c1.height, .2*c1.width, .2*c1.height)
  ct1.fillStyle="black"
  display()
  ct1.strokeStyle="red"
  ct1.lineWidth=4
+ ct1.beginPath();
+ ct1.ellipse(.7*c1.width, .5*c1.height, .1*c1.width, .2*c1.height, 0, 0, 6.29);
+      context.stroke();
  ct1.beginPath()
  ct1.moveTo(ball.x,ball.y)
  ct1.lineTo(ball.x+ 2*sp*angx, ball.y- 2*sp*angy)
