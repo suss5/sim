@@ -23,7 +23,7 @@ const ct1 = c1.getContext("2d")
 const direction = document.getElementById("ang")
 const delay=30
 const targ= new Image()
-c1.width=Math.max(Math.floor(.97*window.innerWidth), Math.floor(.7*window.innerHeight) )
+c1.width=Math.min(Math.floor(.97*window.innerWidth), Math.floor(.7*window.innerHeight) )
 c1.height=c1.width
 ct1.fillStyle="lightblue"
 ct1.fillRect(0,0,c1.width,.7*c1.height)
